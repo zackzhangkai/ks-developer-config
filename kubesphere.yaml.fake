@@ -1,0 +1,13 @@
+authorization:
+    mode: "AlwaysAllow"
+
+#ldap:
+#  host: FAKE
+
+redis:
+  host: FAKE
+
+#servicemesh:
+#  istioPilotHost: http://istio-pilot.istio-system.svc:8080/version
+#  jaegerQueryHost: http://jaeger-query.istio-system.svc:16686
+#  servicemeshPrometheusHost: http://prometheus-k8s.kubesphere-monitoring-system.svc:9090

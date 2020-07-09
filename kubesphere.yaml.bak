@@ -1,0 +1,30 @@
+authentication:
+  authenticateRateLimiterMaxTries: 5
+  authenticationRateLimiterDuration: 30m0s
+  maxAuthenticateRetries: 6
+  multipleLogin: false
+  jwtSecret: "xxx"
+  oauthOptions:
+    accessTokenMaxAge: 0
+    AccessTokenInactivityTimeout: 0
+authorization:
+  mode: "AlwaysAllow"
+ldap:
+  host: openldap.kubesphere-system.svc.cluster.local:389
+  managerDN: cn=admin,dc=kubesphere,dc=io
+  managerPassword: admin
+  userSearchBase: ou=Users,dc=kubesphere,dc=io
+  groupSearchBase: ou=Groups,dc=kubesphere,dc=io
+multicluster:
+  enable: true
+monitoring:
+  endpoint: http://prometheus-k8s.kubesphere-monitoring-system.svc:9090
+  secondaryEndpoint: http://prometheus-k8s-system.kubesphere-monitoring-system.svc:9090
+alerting:
+  endpoint: http://alerting-client-server.kubesphere-alerting-system.svc:9200/api
+notification:
+  endpoint: http://notification.kubesphere-alerting-system.svc:9200
+servicemesh:
+  istioPilotHost: http://istio-pilot.istio-system.svc:8080/version
+  jaegerQueryHost: http://jaeger-query.istio-system.svc:16686
+  servicemeshPrometheusHost: http://prometheus-k8s.kubesphere-monitoring-system.svc:9090

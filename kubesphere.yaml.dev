@@ -1,0 +1,28 @@
+kubernetes:
+  kubeconfig: "/Users/hugo/.kube/config"
+  master: lb.kubesphere.local:6443
+  qps: 1e+06
+  burst: 1000000
+
+authentication:
+  authenticateRateLimiterMaxTries: 5
+  authenticationRateLimiterDuration: 30m0s
+  maxAuthenticateRetries: 6
+  multipleLogin: false
+  jwtSecret: "xxx"
+  oauthOptions:
+    accessTokenMaxAge: 0
+    AccessTokenInactivityTimeout: 0
+authorization:
+    mode: "AlwaysAllow"
+
+ldap:
+  host: FAKE
+
+redis:
+  host: FAKE
+
+servicemesh:
+  istioPilotHost: http://istio-pilot.istio-system.svc:8080/version
+  jaegerQueryHost: http://jaeger-query.istio-system.svc:16686
+  servicemeshPrometheusHost: http://prometheus-k8s.kubesphere-monitoring-system.svc:9090
